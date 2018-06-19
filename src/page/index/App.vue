@@ -42,6 +42,11 @@
         isFold: false,
         menuList: [
           {
+            url: '/rythmCanvas',
+            icon: 'gx-icon-star',
+            name: 'rythmCanvas'
+          },
+          {
             url: '/rythm',
             icon: 'gx-icon-star',
             name: 'rythm.js'

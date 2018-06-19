@@ -2,20 +2,26 @@
   <div>
     <div>
       <div>
-        <img class="videoEl" src="~@/assets/logo.png">
+        <img class="cat-img videoEl1" src="./img/cat1.jpg">
+        <img class="cat-img videoEl2" src="./img/cat2.jpg">
+        <!--<img class="videoEl" src="~@/assets/logo.png">-->
       </div>
       <div>
         <!--<audio class="audio" ref="audio" src="/static/video/Summertime Sadness.mp3" controls="controls"></audio>-->
-        <audio class="audio" ref="audio" src="/static/video/xuemaojiao.mp3" controls="controls" @play="onPlay"
+        <!--controls="controls"-->
+        <audio class="audio" ref="audio" src="/static/video/xuemaojiao.mp3" @play="onPlay"
                @pause="onPause"></audio>
-        <button @click="onStart">开始</button>
-        <button @click="onStop">暂停</button>
+        <div class="btn-box">
+          <button @click="onStart">开始</button>
+          <button @click="onStop">暂停</button>
+        </div>
       </div>
     </div>
   </div>
 </template>
 <script>
   import Rythm from 'rythm.js'
+
   const pulse = (elem, value, options = {}) => {
     const max = options.max || 1.25
     const min = options.min || 0.75
@@ -49,6 +55,7 @@
         this.rythm.start()
       },
       onPause () {
+        console.log('onPause')
         this.rythm.stop(true)
       },
       onStart () {
@@ -56,6 +63,7 @@
         this.rythm.start()
       },
       onStop () {
+        console.log('onStop')
         this.rythm.stop(true)
         this.$refs.audio.pause()
       }
@@ -67,8 +75,12 @@
       const rythm = new Rythm()
       rythm.setMusic('/static/video/Summertime Sadness.mp3')
       rythm.connectExternalAudioElement(this.$refs.audio)
-      // rythm.addRythm('videoEl1', 'color', 0, 10, {form: [17, 153, 142], to: [56, 239, 125]})
-      rythm.addRythm('videoEl', {dance: pulse, reset: resetPulse}, 150, 40)
+//      rythm.addRythm('videoEl1', 'color', 0, 10, {form: [17, 153, 142], to: [56, 239, 125]})
+      rythm.addRythm('videoEl1', {dance: pulse, reset: resetPulse}, 150, 40)
+      rythm.addRythm('videoEl2', 'twist', 0, 10, {
+        min: -45,
+        max: 45
+      })
       // rythm.addRythm('videoEl', 'pulse', 150, 40)
       rythm.start()
       this.rythm = rythm
@@ -77,5 +89,20 @@
   }
 </script>
 <style lang="scss" scoped>
+  .cat-img {
+    height: 300px;
+    margin: 0 50px;
+  }
 
+  .videoEl2 {
+    border-radius: 50%;
+  }
+
+  .btn-box {
+    margin-top: 200px;
+    button {
+      width: 100px;
+      height: 50px;
+    }
+  }
 </style>
