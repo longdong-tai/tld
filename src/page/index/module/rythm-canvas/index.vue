@@ -71,7 +71,7 @@
         // let gap = 2 // 频谱条间距
         let capHeight = 2
         let capStyle = '#fff'
-        let meterNum = 800 / (10 + 2) // 频谱条数量
+        let meterNum = 1000 / (10 + 2) // 频谱条数量
         let capYPositionArray = [] // 将上一画面各帽头的位置保存到这个数组
         let ctx = canvas.getContext('2d')
         let gradient = ctx.createLinearGradient(0, 0, 0, 300)
@@ -122,6 +122,7 @@
       console.log('created..')
     },
     mounted () {
+      window.test = this
       this._prepareAPI()
       this.canvasCtx = this.$refs.canvas.getContext('2d')
       this.$refs.canvas.width = WIDTH
