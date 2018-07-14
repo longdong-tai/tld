@@ -2,7 +2,7 @@
   <div class="content-box">
     <div class="header">
       <div class="logo-box">
-        <img class="logo" src="static/img/icon/logo.png" alt="故乡云" title="故乡云">
+        <!--<img class="logo" src="static/img/icon/logo.png" alt="故乡云" title="故乡云">-->
         <span class="title-md">故乡云</span>
       </div>
     </div>
