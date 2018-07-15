@@ -3,6 +3,10 @@
 
 - [起步](other/installation.md)
 
+- [component组件☟](component/index.md)
+  - [业务组件](component/business/index.md)
+  - [通用组件](component/pure/index.md)
+
 - [util工具方法☟](util/index.md)
   - [说明](util/index.md#示例)
 
