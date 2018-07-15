@@ -3,8 +3,8 @@
 ## isEmptyObject
    - 参数：debounce (obj)
       - {obj} 对象
-    - 返回值：[Boolen]
-    - 作用：判断`obj`是否为空
+   - 返回值：[Boolen]
+   - 作用：判断`obj`是否为空
 
 ## extend
    - 参数：extend (target, ...rest) 同上

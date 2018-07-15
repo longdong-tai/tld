@@ -3,7 +3,7 @@
 
 - [起步](other/installation.md)
 
-- [util工具方法] (util/index.md)
+- [util工具方法☟](util/index.md)
   - [说明](util/index.md#示例)
 
 - [cookie](util/cookie.md)

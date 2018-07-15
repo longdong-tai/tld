@@ -10,8 +10,8 @@
    - 参数：check(reg, ...str)
      - {reg} 需要校验的正则表达式或字符串
      - {str} 可变参数 需要校验的String字符串
-     - 返回值：[Boolean]
-     - 作用：str是否都满足reg，全部满足返回true,否则返回false
+   - 返回值：[Boolean]
+   - 作用：str是否都满足reg，全部满足返回true,否则返回false
 
 ## email
    - 作用：校验邮箱
@@ -21,11 +21,11 @@
             - {str} 需要校验的String字符串
           - 返回值：[Boolean]
           - 作用：str是否是邮箱
-    示例：
-     ```javascript
+   示例：
+   ```javascript
        util.regular.emailReg // 获取正则
        util.regular.isEmail('123456@qq.com') // 直接校验
-     ```
+   ```
 
 ## idCard
    - 作用：身份证
